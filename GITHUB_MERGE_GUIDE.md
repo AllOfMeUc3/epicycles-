@@ -65,7 +65,7 @@ You have **two options** to merge the epicycle animation feature into main:
 
 This is the easiest and most visual way:
 
-1. **Go to GitHub**: Navigate to https://github.com/AllOfMeUc3/epicycles-/pulls/1
+1. **Go to GitHub**: Navigate to your repository at https://github.com/AllOfMeUc3/epicycles-, then click on "Pull requests" tab, and select PR #1
    
 2. **Review PR #1**: This pull request is already open and wants to merge `copilot/add-epicycle-animation-feature` into `main`
 
@@ -132,37 +132,32 @@ Here's the typical Git/GitHub workflow:
 
 ## Visualization of Your Repository
 
+**Current State:**
 ```
-Current State:
-                                    
-    copilot/add-epicycle-animation-feature (PR #1)
-         ↓
-    [Add .gitignore]
-    [Add epicycle app]
-    [Initial plan]
-         ↓
-    ┌────┴────┐
-    │         │
-    │    [Fix typo in README] ← main
-    │         │
-    └────┬────┘
-         ↓
-    [Initial plan]
-    [Initial commit]
-         ↓
-    copilot/understand-github-merge-process (current)
+main branch:          [Fix typo in README] ← commits only include README
+                               ↑
+                      [Initial commit]
 
+feature branch:       [Add .gitignore] ← commits include epicycle app files
+                               ↑
+                      [Add epicycle app]
+                               ↑
+                      [Initial plan]
+                               ↑
+                      [Initial commit]
+```
 
-After Merging:
-
-    main ← [Contains everything from both branches]
-         ↓
-    [Merge copilot/add-epicycle-animation-feature]
-    [Add .gitignore]
-    [Add epicycle app]
-    [Initial plan]
-    [Fix typo in README]
-    [Initial commit]
+**After Merging feature → main:**
+```
+main branch:          [Merge feature branch] ← now has all files
+                               ↑
+                      [Add .gitignore]
+                               ↑
+                      [Add epicycle app]
+                               ↑
+                      [Fix typo in README]
+                               ↑
+                      [Initial commit]
 ```
 
 ## Common Questions
@@ -182,7 +177,7 @@ After Merging:
 ### Q: What's the difference between merge and rebase?
 **A:** 
 - **Merge**: Combines branches and preserves full history (easier, safer)
-- **Rebase**: Rewrites history to make it linear (advanced, can cause issues if not careful)
+- **Rebase**: Moves commits from one branch to a new starting point, creating a cleaner history but can cause issues if the branch has been shared with others
 
 For beginners, stick with merge!
 
